@@ -25,9 +25,16 @@ function handleLogout() {
           Déconnexion
         </button>
       </div>
-      <p v-if="authStore.user" class="text-gray-700">
+      <p v-if="authStore.user" class="text-gray-700 mb-4">
         Bienvenue, {{ authStore.user.name }} ({{ authStore.user.email }})
       </p>
+
+      <router-link
+        to="/appointments"
+        class="inline-block bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700"
+      >
+        Voir les rendez-vous
+      </router-link>
     </div>
   </div>
 </template>
