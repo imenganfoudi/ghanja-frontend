@@ -29,12 +29,20 @@ function handleLogout() {
         Bienvenue, {{ authStore.user.name }} ({{ authStore.user.email }})
       </p>
 
-      <router-link
-        to="/appointments"
-        class="inline-block bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700"
-      >
-        Voir les rendez-vous
-      </router-link>
+      <div class="flex gap-3">
+        <router-link
+          to="/appointments"
+          class="inline-block bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700"
+        >
+          Rendez-vous
+        </router-link>
+        <router-link
+          to="/services"
+          class="inline-block bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700"
+        >
+          Services
+        </router-link>
+      </div>
     </div>
   </div>
 </template>
