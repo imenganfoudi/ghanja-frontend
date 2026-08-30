@@ -43,7 +43,15 @@ async function handleDelete(id: number) {
 <template>
   <div class="min-h-screen bg-gray-100 p-8">
     <div class="max-w-5xl mx-auto">
-      <h1 class="text-2xl font-bold text-purple-600 mb-6">Rendez-vous</h1>
+      <div class="flex justify-between items-center mb-6">
+        <h1 class="text-2xl font-bold text-purple-600">Rendez-vous</h1>
+        <router-link
+          to="/appointments/new"
+          class="bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700"
+        >
+          + Nouveau
+        </router-link>
+      </div>
 
       <div v-if="store.loading" class="text-gray-500">Chargement...</div>
       <div v-else-if="store.error" class="text-red-500">{{ store.error }}</div>
