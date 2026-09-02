@@ -8,16 +8,6 @@ onMounted(() => {
   store.fetchAppointments()
 })
 
-function statusLabel(status: string) {
-  const labels: Record<string, string> = {
-    pending: 'En attente',
-    confirmed: 'Confirmé',
-    cancelled: 'Annulé',
-    completed: 'Terminé',
-  }
-  return labels[status] || status
-}
-
 function statusColor(status: string) {
   const colors: Record<string, string> = {
     pending: 'bg-yellow-100 text-yellow-800',
