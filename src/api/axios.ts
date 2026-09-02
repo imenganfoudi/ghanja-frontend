@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const api = axios.create({
-  baseURL: 'http://localhost:8000/api',
+baseURL: 'https://ghanja-v2-api.onrender.com/api',
   withCredentials: false,
   headers: {
     'Accept': 'application/json',
